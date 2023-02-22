@@ -15,12 +15,12 @@ your `catkin_ws` directory.
 ```
 
 
-# Tutorial
+# Operation (Dartmouth Robotics)
 
 You can launch the `rtsp_ros_driver` main node by running:
 
 ```
-roslaunch rtsp_ros_driver rtsp_camera.launch <arguments>
+roslaunch rtsp_ros_driver rtsp_camera.launch hostname:=192.168.10 username:=admin port:=554 stream:=uwcam
 ```
 
 

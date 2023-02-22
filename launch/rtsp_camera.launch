@@ -20,6 +20,10 @@
             <param name="image_raw_topic" value="$(arg image_raw_topic)" />
             <param name="camera_info_topic" value="$(arg camera_info_topic)" />
         </node>
+        <!-- compressed image republisher -->
+        <node pkg="image_transport" type="republish" name="compressed_republisher" args="raw in:=$(arg image_raw_topic) compressed out:=$(arg image_raw_topic)" />
     </group>
 
+    <!-- compressed image publihser -->
+    <!--node pkg="image_transport" type="republish" name="republisher" args="raw in:=$(arg camera_name)/$(arg image_raw_topic) compressed out:=$(arg camera_name)" -->
 </launch>
